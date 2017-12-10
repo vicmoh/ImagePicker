@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyb-pz-tSU" userLabel="Image Pick">
+                                <rect key="frame" x="123" y="309" width="130" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="CRX-cG-qsE"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ee6-J2-FII"/>
+                                </constraints>
+                                <state key="normal" title="Pick Image"/>
+                                <connections>
+                                    <action selector="pickImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m5A-kw-rg3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JV-qL-1d3">
+                                <rect key="frame" x="123" y="251" width="130" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Tzg-SO-kw9"/>
+                                    <constraint firstAttribute="width" constant="130" id="a1u-T6-zfO"/>
+                                </constraints>
+                                <state key="normal" title="Activity View"/>
+                                <connections>
+                                    <action selector="activityView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B89-d3-cGy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDf-fD-Hj4">
+                                <rect key="frame" x="123" y="367" width="130" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZLQ-Zm-KHE"/>
+                                    <constraint firstAttribute="width" constant="130" id="ZyG-8A-OZo"/>
+                                </constraints>
+                                <state key="normal" title="Alert Action"/>
+                                <connections>
+                                    <action selector="AlertAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vCl-g9-fe0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uyb-pz-tSU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ss-0g-Z14"/>
+                            <constraint firstItem="uyb-pz-tSU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kwk-BH-R87"/>
+                            <constraint firstItem="qDf-fD-Hj4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RR1-ve-DeF"/>
+                            <constraint firstItem="uyb-pz-tSU" firstAttribute="top" secondItem="8JV-qL-1d3" secondAttribute="bottom" constant="8" id="qAu-I3-fGV"/>
+                            <constraint firstItem="qDf-fD-Hj4" firstAttribute="top" secondItem="uyb-pz-tSU" secondAttribute="bottom" constant="8" id="uXZ-07-PVH"/>
+                            <constraint firstItem="8JV-qL-1d3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vYy-K3-lbh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
         </scene>
     </scenes>
 </document>
